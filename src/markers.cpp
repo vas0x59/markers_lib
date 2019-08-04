@@ -16,7 +16,7 @@ using namespace cv;
 // };
 // using namespace markers;
 
-namespace markers
+namespace markers_lib
 {
 void PRINT_DEBUG(string str)
 {

@@ -13,7 +13,7 @@
 
 using namespace cv;
 // using namespace markers;
-namespace markers
+namespace markers_lib
 {
 class Solver
 {

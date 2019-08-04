@@ -10,7 +10,7 @@
 
 using namespace cv;
 using namespace std;
-using namespace markers;
+using namespace markers_lib;
 // namespace markers
 // {
 Solver::Solver()

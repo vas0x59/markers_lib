@@ -16,7 +16,7 @@
 using namespace cv;
 using namespace std;
 using namespace cv::aruco;
-using namespace markers;
+using namespace markers_lib;
 
 // namespace markers
 // {
