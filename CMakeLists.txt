@@ -18,9 +18,9 @@ find_package( OpenCV REQUIRED )
 
 
 add_library(markers_lib SHARED
-markers_lib/aruco_markers.cpp
-markers_lib/solver.cpp
-markers_lib/markers.cpp
+src/aruco_markers.cpp
+src/solver.cpp
+src/markers.cpp
 )
 
 install(
