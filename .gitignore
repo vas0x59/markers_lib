@@ -1,0 +1,7 @@
+.vscode/*
+CMakeFiles/*
+CMakeCache.txt
+Makefile
+*.cmake
+*.so
+install_manifest.txt

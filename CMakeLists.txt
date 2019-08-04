@@ -24,6 +24,6 @@ markers_lib/markers.cpp
 )
 
 install(
-    TARGETS markers
+    TARGETS markers_lib
     LIBRARY DESTINATION /usr/lib
 )
