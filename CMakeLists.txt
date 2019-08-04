@@ -23,6 +23,9 @@ src/solver.cpp
 src/markers.cpp
 )
 
+target_link_libraries(markers_lib
+    ${OpenCV_LIBS}
+)
 install(
     TARGETS markers_lib
     LIBRARY DESTINATION /usr/lib

@@ -10,9 +10,9 @@
 
 using namespace cv;
 using namespace std;
-using namespace markers_lib;
-// namespace markers
-// {
+// using namespace markers_lib;
+namespace markers_lib
+{
 Solver::Solver()
 {
     _R_flip = R_flip_gen(1, -1, -1);
@@ -125,4 +125,4 @@ bool Solver::solve(Mat objPoints, Mat imgPoints, Pose &pose, Mat &image, bool us
     }
     // divide by four since all the four corners are concatenated in the array for each marker
 }
-// } // namespace Markers
+};

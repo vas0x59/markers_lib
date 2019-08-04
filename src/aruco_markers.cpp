@@ -16,12 +16,12 @@
 using namespace cv;
 using namespace std;
 using namespace cv::aruco;
-using namespace markers_lib;
+// using namespace markers_lib;
 
-// namespace markers
-// {
+namespace markers_lib
+{
 
-void markers_lib::_drawPlanarBoard(Board *_board, Size outSize, OutputArray _img, int marginSize,
+void _drawPlanarBoard(Board *_board, Size outSize, OutputArray _img, int marginSize,
 					  int borderBits)
 {
 
@@ -395,6 +395,6 @@ void ArucoMarkersDetector::_getBoardObjectAndImagePoints(const Ptr<aruco::Board>
 	Mat(objPnts).copyTo(objPoints);
 	Mat(imgPnts).copyTo(imgPoints);
 }
-// } // namespace Markers
+};
 
 // void ArucoMarkersDetector::
