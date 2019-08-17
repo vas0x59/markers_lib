@@ -4,5 +4,4 @@ CMakeCache.txt
 Makefile
 *.cmake
 *.so
-!libmarkers_lib.so
 install_manifest.txt
