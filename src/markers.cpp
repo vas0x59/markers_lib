@@ -119,7 +119,7 @@ Point3d rotationMatrixToEAngles(Mat R)
 // cv::rot
 Mat R_flip_gen(double x, double y, double z)
 {
-    Mat _R_flip = Mat(3, 3, CV_64F, cvScalar(0.));
+    Mat _R_flip = Mat(3, 3, CV_64F, Scalar(0.));
     _R_flip.at<double>(0, 0) = x;
     _R_flip.at<double>(1, 1) = y;
     _R_flip.at<double>(2, 2) = z;

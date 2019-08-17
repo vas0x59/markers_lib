@@ -56,7 +56,7 @@ bool Solver::solve(Mat objPoints, Mat imgPoints, Pose &pose, bool useExtrinsicGu
     {
         // aruco::drawAxis(image, _cameraMatrix, _distCoeffs, _rvec,
         //       _tvec, 0.2);
-        Mat pos_camera = Mat(3, 3, CV_64F, cvScalar(0.));
+        Mat pos_camera = Mat(3, 3, CV_64F, Scalar(0.));
         Mat R_ct, R_tc;
         cv::Rodrigues(_rvec, R_ct);
         R_tc = R_ct.t();
@@ -99,7 +99,7 @@ bool Solver::solve(Mat objPoints, Mat imgPoints, Pose &pose, Mat &image, bool us
     {
         aruco::drawAxis(image, _cameraMatrix, _distCoeffs, _rvec,
                         _tvec, 0.2);
-        Mat pos_camera = Mat(3, 3, CV_64F, cvScalar(0.));
+        Mat pos_camera = Mat(3, 3, CV_64F, Scalar(0.));
         Mat R_ct, R_tc;
         cv::Rodrigues(_rvec, R_ct);
         R_tc = R_ct.t();
