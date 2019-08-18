@@ -8,7 +8,7 @@ then
         rm -rf build_arm
         mkdir build_arm
         cd build_arm
-        cmake -D CMAKE_BUILD_TYPE=RELEASE ..
+        cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_TOOLCHAIN_FILE=$HOME/rpi/toolchain_rpi.cmake ..
     else
         cd build_arm
     fi
