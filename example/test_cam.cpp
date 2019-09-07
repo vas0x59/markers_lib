@@ -31,7 +31,8 @@ struct VisionData
     string ToString();
 };
 
-string VisionData::ToString(){
+string VisionData::ToString()
+{
     return string_pose(pose) + " success: " + to_string(success);
 }
 
@@ -87,14 +88,18 @@ int main()
     load_config();
     init_marker_reg();
 
-    VideoCapture cap(cam_id);
+    VideoCapture cap(0);
+    cap.open(0);
     while (true)
     {
         Mat frame;
         cap >> frame;
-        VisionData vd = process_img(frame);
-        cout << vd.ToString() << "\n";
-        usleep(1000000 / 20);
+        if (cap.isOpened() == true)
+        {
+            VisionData vd = process_img(frame);
+            cout << vd.ToString() << "\n";
+        }
+        // usleep(1000000 / 20);
     }
     cap.release();
 }

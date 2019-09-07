@@ -6,3 +6,4 @@ Makefile
 *.so
 install_manifest.txt
 build*/*
+somefile.jpg
