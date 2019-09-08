@@ -23,7 +23,8 @@ string map_jpeg = "./map.jpg";
 int map_jpeg_size = 1000;
 int dictinary = 3;
 int cam_id = 2;
-
+int image_width = 320;
+int image_height = 240;
 struct VisionData
 {
     Pose pose;
@@ -64,6 +65,10 @@ void load_config()
     fs2["map_jpeg_size"] >> map_jpeg_size;
     fs2["dictinary"] >> dictinary;
     fs2["cam_id"] >> cam_id;
+
+    fs2["dictinary"] >> dictinary;
+    fs2["image_width"] >> image_width;
+    fs2["image_height"] >> image_height;
     fs2.release();
 }
 
@@ -90,6 +95,10 @@ int main()
 
     VideoCapture cap(0);
     cap.open(0);
+
+    cap.set(CAP_PROP_FRAME_WIDTH, image_width);
+    cap.set(CAP_PROP_FRAME_HEIGHT, image_height);
+
     while (true)
     {
         Mat frame;
