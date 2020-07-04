@@ -97,8 +97,8 @@ bool Solver::solve(Mat objPoints, Mat imgPoints, Pose &pose, Mat &image, bool us
     solvePnP(objPoints, imgPoints, _cameraMatrix, _distCoeffs, _rvec, _tvec, useExtrinsicGuess);
     if (((int)objPoints.total() / 4) > 0)
     {
-        aruco::drawAxis(image, _cameraMatrix, _distCoeffs, _rvec,
-                        _tvec, 0.2);
+        cv::drawFrameAxes(image, _cameraMatrix, _distCoeffs, _rvec,
+                        _tvec, 0.2, 3);
         Mat pos_camera = Mat(3, 3, CV_64F, Scalar(0.));
         Mat R_ct, R_tc;
         cv::Rodrigues(_rvec, R_ct);
